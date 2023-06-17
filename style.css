@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    overflow: hidden;
+}
+main>header {
+    background-color: rgb(88, 137, 167);
+    color: white;
+    padding-left: 7px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+div.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+div.title>h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.container {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-y: auto;
+}
+.box{
+    background-color: rgb(169, 165, 165);
+}
+#users-window {
+    background-color: rgb(59, 59, 59);
+    width: 300px;
+    color: white;
+    padding: 15px 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+    height: 80vh;
+} 
+.users-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.users-head>h4 {
+    background-color: rgb(169, 165, 165);
+    padding: 0px 5px;
+    border-radius: 50px;
+}
+#chat-window {
+    display: none;
+    background-color: rgb(59, 59, 59);
+    border-radius: 8px;
+    width: 100%;
+    overflow-y: auto;
+}
+#kuhelichats {
+    height: 70vh;
+    padding: 20px;
+}
+#rupamchats {
+    height: 70vh;
+    padding: 20px;
+}
+#priyankachats {
+    height: 70vh;
+    padding: 20px;
+}
+div.incoming {
+    background-color: white;
+    padding: 1px 10px;
+    margin-bottom: 2px;
+    max-width: 400px;
+    border-radius: 10px;
+    height: max-content;
+    margin-left: 10px;
+}
+div.outgoing {
+    margin-left: auto;
+    background-color: rgb(88, 137, 167);
+    border-radius: 10px;
+    padding: 1px 10px;
+    margin-bottom: 2px;
+    max-width: 400px;
+}
+div#user-input{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5px 10px;
+    display: none;
+}
+div#user-input>input{
+     background-color: white;
+     border:2px solid black;
+     outline: none;
+     width: 100%;
+     padding: 10px 20px;
+     font-size: 15px;
+     margin-right: 5px;
+     border-radius: 20px 20px 20px 20px;
+}
+.butn{
+    background-color: rgb(233, 211, 211);
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    font-size: .8rem;
+    font-weight: bold;
+    background-color:rgb(88, 137, 167) ;
+    letter-spacing: .5px;
+    color: white;
+}
+p {
+    margin-bottom: 6px;
+}
+.user-join{
+    background-color:rgb(172, 201, 139);
+    min-width: 200px;
+    max-width: max-content;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#video-call-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#local-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 20%;
+    margin: 15px;
+    border-radius: 15px;
+    background: white;
+}
+#remote-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.call-action-div{
+    position: absolute;
+    left: 35%;
+    bottom: 32px;
+}
+button{
+    width: 200px;
+    margin-left: 7px;
+    color: white;
+    background:none;
+    border: none;
+}
+.msg{
+    font-size: 14px;
+}
+#scrn>h4{
+    text-align: center;
+}
+#scrn {
+    display: grid;
+    border-radius: 8px;
+    width: 100%;
+    overflow-y: auto;
+    height: 70vh;
+}
+.urna{
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+.up{
+    border-top: 1px solid grey;
+}
+.urna>p{
+    margin-left: 20px;
+}
+#call{
+    display: none;
+}
+.mute{
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    width: 120px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.mute:hover{
+    color: white;
+}
+svg{
+    position:fixed;
+}
+@media screen and (min-width:1600px) and (max-width:2200px){
+    main{
+        width: 60%;
+    }
+    #scrn{
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width:500px) and (max-width:800px){
+    div.incoming{
+        max-width: 300px;
+    }
+    div.outgoing{
+        max-width: 300px;
+    }
+    #scrn{
+        display: block;
+    }
+    .call-action-div{
+        left: 15%;
+    }
+    .mute{
+        width: 100px;
+    }
+    
+}
+ 
+@media screen and (max-width:500px){
+    #scrn{
+        display: none;
+    }
+    #chat-window{
+        display: none;
+    }
+    div.incoming{
+        max-width: 190px;
+    }
+    div.outgoing{
+        max-width: 190px;
+    }
+    .user-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 2px;
+    }
+    .call-action-div{
+        left: 5%;
+    }
+    .mute{
+        width: 70px;
+    }    
+}
+
